@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="newmodule">
+<head>
+    <title>Route</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="./mod1.js"></script>
+    <script src="./controller1.js"></script>
+    <script src="./route1.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles1.css">
+
+</head>
+<body>
+<div>
+    <div id="head" ng-controller="controllers">
+        <h1 class="hstyle">{{heading}}</h1>
+    </div>
+    <div id="topnavbar">
+        <ul>
+            <li><a href="#/home">Home</a></li>
+            <li><a href="#/details">Details</a></li>
+        </ul>
+
+    </div>
+    <div id="container">
+        <ng-view></ng-view>
+    </div>
+</div>
+</body>
+</html>

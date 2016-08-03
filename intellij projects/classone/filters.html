@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+        var one=angular.module("myapp",[]);
+        one.controller("mycontroller",function($scope){
+           var data=[{name:"navaneeth",salary:24000,city:"oklahima"},
+               {name:"yashaswini",salary:23000,city:"fullerton"},
+               {name:"nitin",salary:24000,city:"iran"}];
+            $scope.data=data;
+        });
+    </script>
+</head>
+<body ng-controller="mycontroller">
+<label>search:</label>
+<input type="text" placeholder="search"  ng-model="search.city" />
+<input type="text" ng-model="doit" ng-init="doit=1"/>
+<br>
+<br>
+<table style="border: 1px solid black">
+    <thead>
+    <tr>
+    <th style="border: 1px solid black">Name</th>
+    <th style="border: 1px solid black">Age</th>
+    <th style="border: 1px solid black">City</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="d in data | filter : search | orderBy : 'salary' | limitTo : doit">
+    <tr>
+    <td  style="border: 1px solid black">{{d.name | uppercase }}</td>
+    <td  style="border: 1px solid black">{{d.salary | currency : "Rs" : 1}}</td>
+    <td  style="border: 1px solid black">{{d.city | lowercase}}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

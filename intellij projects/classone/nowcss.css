@@ -1,0 +1,117 @@
+#firstborder{
+    background-image: url("bg.jpg");
+    position:absolute;
+    margin-top:20px;
+    margin-left:20px;
+    height:1550px;
+    width:1310px;
+    border:1px solid black;
+    margin-bottom: 20px;
+}
+.image{
+    position:absolute;
+    margin-top:10px;
+    margin-left:10px;
+    height:130px;
+    width:1290px;
+    text-align: center;
+
+}
+#nav{
+    position:absolute;
+    margin-top:180px;
+    margin-left:10px;
+    height:40px;
+    width:1290px;
+    background-color:rgb(50,50,50);
+    text-align:center;
+}
+#links{
+    position:absolute;
+    margin-top:150px;
+    margin-left:10px;
+    height:20px;
+    width:1290px;
+    text-align:center;
+}
+#links a{
+    margin-left:16px;
+    text-decoration:none;
+    color:black;
+}
+#links a:hover{
+    color:red;
+}
+#slideimage{
+    position:absolute;
+    margin-top:230px;
+    margin-left:10px;
+    height:600px;
+    width:1290px;
+    background-color:rgb(200,200,200);
+}
+#leftbox{
+    position:absolute;
+    margin-top:870px;
+    margin-left:10px;
+    height:400px;
+    width:620px;
+    background-color:rgb(200,200,200);
+}
+#rightbox{
+    position:absolute;
+    margin-top:870px;
+    margin-left:680px;
+    height:400px;
+    width:620px;
+    background-color:rgb(200,200,200);
+}
+#left{
+    position:absolute;
+    margin-top:870px;
+    margin-left:655px;
+    height:565px;
+    border-left:1px solid rgb(150,150,150);
+}
+.belowleftbox{
+    position: absolute;
+    margin-top:385px;
+    margin-left:10px;
+    height:150px;
+    width:620px;
+
+    text-align: center;
+}
+.belowrightbox{
+    position: absolute;
+    margin-top:385px;
+    margin-left:680px;
+    height:150px;
+    width:620px;
+
+    text-align: center;
+}
+.footer{
+    position: absolute;
+    margin-top:1575px;
+    margin-left:20px;
+    height:30px;
+    width:1310px;
+    text-align: center;
+}
+.content{
+    position: absolute;
+    text-align:center;
+    margin-top:200px;
+    margin-left:900px;
+    height:200px;
+    width:300px;
+}
+.button{
+   padding:8px;
+    background-color:rgb(50,50,50);
+color:white;
+}
+.button:hover{
+    color:red;
+}

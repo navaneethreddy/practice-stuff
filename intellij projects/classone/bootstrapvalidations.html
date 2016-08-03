@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapps">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Page</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="new1.js"></script>
+    <script src="filters.js"></script>
+    <link rel="stylesheet" type="text/css" href="valid.css">
+</head>
+<body ng-controller="mycontroller1">
+<div class="row">
+    <div class="container-fluid">
+    <div class="col-sm-6 col-sm-offset-3">
+        <form name="myform">
+            <div class="form-group">
+                <label>Name: </label>
+
+                <input type="text" name="uname" ng-model="username" required>
+                <span ng-show="myform.uname.$error.required">fillthis</span>
+            </div>
+
+        </form>
+
+    </div>
+    </div>
+</div>
+<br>
+<br>
+<table style="border: 1px solid black">
+    <thead>
+    <tr>
+        <th style="border: 1px solid black">Name</th>
+        <th style="border: 1px solid black">Age</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="n in names">
+    <tr>
+        <td style="border: 1px solid black">{{n.ones}}</td>
+        <td style="border: 1px solid black">{{n.age | agenumbers}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<br>
+<br>
+<input type="text" ng-model="searchs"/>
+{{searchs | research}}
+<br>
+<br>
+Name: {{myname}}
+<br>
+<br>
+<div ng-repeat="rec in data">
+    {{rec.Name}} , {{rec.City}} , {{rec.Country}}
+</div>
+<br>
+<br>
+<table style="border:2px solid red">
+    <thead>
+    <tr>
+        <th style="border:2px solid red">Name</th>
+        <th style="border:2px solid red">City</th>
+        <th style="border:2px solid red">Country</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="view in show">
+    <tr>
+        <td style="border:2px solid red">{{view.Name}}</td>
+        <td style="border:2px solid red">{{view.City}}</td>
+        <td style="border:2px solid red">{{view.Country}}</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

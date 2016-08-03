@@ -1,0 +1,28 @@
+<div id="containers">
+    <h1>{{hname}}</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody ng-repeat="data in words">
+    <tr>
+        <td>{{data.id | words | uppercase}}</td>
+        <td>{{data.name}}</td>
+    </tr>
+    </tbody>
+</table>
+    <br>
+    <br>
+    <div ng-repeat="details in two">
+        {{details.Name}} , {{details.City}} , {{details.Country}}
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div ng-repeat="detail in four">
+        {{detail.Name}} , {{detail.City}} , {{detail.Country}}
+    </div>
+</div>

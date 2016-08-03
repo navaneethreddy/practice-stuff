@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script>
+        var one=angular.module("myapp",[]);
+        one.controller("mycontroller",function($scope){
+            $scope.Names="name";
+            $scope.students=[{id:"1",name:"navaneeth"},{id:2,name:"yashaswini"},{id:3,name:"chintu"}];
+            $scope.gender=[{id:"1",g:"male"},{id:"2",g:"female"}];
+            $scope.name={fname:"Firstname",lname:"lastname"};
+            $scope.onq={sy:"hello"};
+
+        });
+    </script>
+</head>
+<body>
+<div ng-controller="mycontroller">
+<form>
+    <label> <span ng-bind="Names"></span> </label>
+    <input type="text" ng-model="name.fname"/>{{name.lname}}
+    <br>
+    <br>
+<select ng-model="st" ng-options="std.id as std.name for std in students"><option value="">--select--</option></select>
+  <tt>{{st}}</tt>
+    <div ng-switch on="st">
+        <div ng-switch-when="1">Home</div>
+        <div ng-switch-when="2">Family</div>
+        <div ng-switch-default>Default</div>
+    </div>
+</form>
+    <br>
+    <br>
+    <br>
+
+   <div ng-mouseleave="count=count+1" ng-init="count=0">count</div>
+    {{count}}
+
+</div>
+<div ng-moverover="over()">
+    hello{{hii}}
+</div>
+<input type="text" ng-copy="copied=true" ng-init="copied=false;value='hello'" ng-model="value"/>
+{{copied}}
+<div ng-cut="copied=true" ng-init="copied=false;value:'cut me';" ng-model="value">
+{{value}}
+</div>
+{{copied}}
+<br>
+<br>
+<br>
+
+<form name="myform">
+  <label><span ng-bind="name.fname"></span></label>
+    <input type="text" name="fname" ng-model="finame" ng-required="false"/>
+    <div ng-show="myform.fname.$error.required">Required!!</div>
+    <label><span ng-bind="lname"></span></label>
+    <input type="text" name="lname" ng-model="liname" ng-minlength="2" ng-maxlength="10"/>
+    <div ng-show="myform.lname.$error.minlength">Too Short!!</div>
+    <div ng-show="myform.lname.$error.maxlength">Too Long!!</div>
+</form>
+<br>
+<br>
+<br>
+<input type="text" ng-focus="focus=true" ng-blur="focus=false" ng-init="focus=false" />
+{{focus}}
+
+<br>
+
+<br>
+<form name="hi">
+    <div >
+<input type="text" ng-model="names" name="navaneeth" required/>
+<label ng-show="hi.navaneeth.$error.required" ng-class="{'Red':hi.navaneeth.$error}">*</label>
+    </div>
+<br>
+</form>
+
+
+</body>
+</html>

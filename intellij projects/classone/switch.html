@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+    <script >
+        function ExampleController($scope)
+        {
+            $scope.test = "values from Controller ";
+            $scope.items = [{
+                name :"settings",
+                id :"id1"},
+                {name :"home",
+                    id :"id2"},
+                {name :"Invalid",
+                    id :"id3"}];
+        }
+    </script>
+</head>
+<body ng-app >
+<div ng-controller="ExampleController">
+    <select ng-model="selection" ng-options="item.id as item.name for item in items track by item.name" > </select>
+    <tt>selection={{selection}}</tt>
+    <div ng-switch on="selection">
+        <div ng-switch-when="id1">Settings Div</div>
+        <div ng-switch-when="id1">Settings Div</div>
+        <div ng-switch-when="id2">Home Span</div>
+        <div ng-switch-default>default</div>
+    </div> </div>
+
+
+</body>
+</html>

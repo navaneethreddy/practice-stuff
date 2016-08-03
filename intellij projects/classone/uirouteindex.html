@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="uimodule">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+    <script src="./uiroutejavascript.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesuiroute.css">
+</head>
+<body>
+<div>
+    <div id="head">
+        <h1 class="hstyle">Welcome</h1>
+    </div>
+    <div id="aside">
+        <div id="nav">
+            <a ui-sref="home" >Home</a><br><br>
+            <a ui-sref="students" >students</a><br><br>
+        </div>
+    </div>
+    <div id="container">
+        <ui-view></ui-view>
+    </div>
+</div>
+</body>
+</html>

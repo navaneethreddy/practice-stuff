@@ -1,0 +1,9 @@
+<div>
+    <div ng-repeat="n in newdata">
+        <a ui-sref="card({c: n.cars})">{{n.cars}}</a>
+
+    </div>
+
+    <a ui-sref=".show" ui-sref-active="active" style="text-decoration: none;">Show</a>
+
+</div>

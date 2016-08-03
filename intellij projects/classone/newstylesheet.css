@@ -1,0 +1,41 @@
+#navbar{
+    position: absolute;
+    margin-top:20px;
+    margin-left:10px;
+    height:40px;
+    width:1300px;
+    background-color:darkseagreen;
+    text-align:center;
+}
+
+#content{
+    position: absolute;
+    margin-top:70px;
+    margin-left:10px;
+    height:550px;
+    width:1300px;
+    background-color: darkgray;
+}
+p{
+    display:inline;
+
+
+}
+p a{
+    text-decoration: none;
+    color:black;
+    margin-left:20px;
+    margin-top:10px;
+}
+.active{
+    background-color: black;
+    color:red;
+}
+#contentno{
+    position: absolute;
+    margin-top:70px;
+    margin-left:10px;
+    height:550px;
+    width:1300px;
+    background-color: darkgray;
+}

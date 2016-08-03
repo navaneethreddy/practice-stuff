@@ -1,0 +1,11 @@
+<div id="containers">
+    <p ng-repeat="n in data">
+       <a ui-sref="details({id: n.name})"> {{n.name}} </a>
+        , {{n.place}}</p>
+    <p>hello</p>
+
+    <div>
+        <ui-view></ui-view>
+    </div>
+
+</div>

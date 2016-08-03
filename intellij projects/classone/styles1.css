@@ -1,0 +1,50 @@
+#head{
+    position:absolute;
+    height:95px;
+    width:1350px;
+    background-color:rgb(128,128,128);
+}
+
+#container{
+    position:absolute;
+    top:160px;
+    height:500px;
+    width:1350px;
+    background-color:rgb(200,200,200);
+}
+.hstyle{
+    text-align:center;
+    color:white;
+    margin-top:35px;
+}
+
+#containers{
+    position:absolute;
+    height:500px;
+    width:1350px;
+    background-color:rgb(200,200,200);
+    overflow: scroll;
+}
+#topnavbar{
+    position: absolute;
+    margin-top: 100px;
+    height:48px;
+    width:1350px;
+    background-color:black;
+    color:white;
+}
+
+ul li{
+    display:inline;
+}
+ul li a{
+    text-decoration:none;
+    background-color:white;
+    color:black;
+    padding:10px;
+    margin-left:8px;
+    border-radius: 5px;
+}
+ul li a:hover{
+    color:red;
+}

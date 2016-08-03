@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <style type="text/css">
+        .nava input.ng-invalid.ng-touched {
+            background-color: #FA787E;
+        }
+</style>
+</head>
+<body >
+<form name="myform" class="nava">
+    <div>
+    <label>Name:</label>
+    <input type="text" name="myname" ng-model="username" required/>
+    <span  style="color:red" ng-show="myform.myname.$error.required">
+        <span ng-show="myform.myname.$touched && myform.myname.$invalid">name required</span>
+    </span>
+    <span style="color:green" ng-show="myform.myname.$valid">valid name</span>
+    </div>
+    <br>
+    <div class="{'red':myform.email.$touched && myform.email.$invalid}">
+        <label>Email:</label>
+        <input type="email" name="email" ng-model="usermail" required/>
+
+            <span style="color:red" ng-show="myform.email.$dirty && myform.email.$invalid">
+
+            <span ng-show="myform.email.$error.email">please enter valid email</span>
+            <span ng-show="myform.$untouched">please enter your mail</span>
+        </span>
+        <span ng-show="myform.email.$touched && myform.email.$invalid">plz enter</span>
+        <span style="color:blue" ng-show="myform.mail.$valid">valid mail</span>
+    </div>
+    <br>
+    <div>
+        <label>Password</label>
+        <input type="password" name="pass" ng-model="password" ng-minlength="5" ng-maxlength="12" required/>
+        <span style="color:red;">
+            <span ng-show="myform.pass.$touched  && myform.pass.$invalid">this feild is required</span>
+            <span ng-show="myform.pass.$touched && myform.pass.$error.minlength">please enter min length</span>
+            <span ng-show="myform.pass.$error.maxlength">you exceded maximum length</span>
+            <span ng-show="myform.pass.$error.required"></span>
+            <span ng-show="myform.pass.$untouched && myform.pass.$invalid">touch</span>
+</span>
+
+    </div>
+    <br>
+    <input type="button" value="submit" ng-disabled="myform.$invalid"/>
+</form>
+</body>
+</html>

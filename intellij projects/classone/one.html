@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="contain">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="./new.js"></script>
+    <script src="./news1.js"></script>
+    <link href="./style.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+
+
+
+
+
+<div ng-controller="mycontroller">
+<table>
+    <thead>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Like</th>
+    <th>DisLike</th>
+    <th>likesbutton</th>
+    <th>dislikesbutton</th>
+    </thead>
+    <tbody ng-repeat="student in students">
+    <td>{{student.name}}</td>
+    <td>{{student.age}}</td>
+    <td>{{student.like}}</td>
+    <td>{{student.dislike}}</td>
+    <td><input type="button" ng-click="increase(student)"  value="like"/></td>
+    <td><input type="button" ng-click="decrease(student)"  value="dislike"/></td>
+    </tbody>
+</table>
+
+    <div  ng-repeat="studen in student">
+        [{{$index+1}}]{{studen.name}}
+        {{studen.age}}
+        {{studen.sex}}
+     <span ng-if="$first">
+ <strong>(first element found)</strong>
+ </span>
+ <span ng-if="$middle">
+ <strong>(middle element found)</strong>
+ </span>
+ <span ng-if="$last">
+ <strong>(last element found)</strong>
+ </span>
+    </div>
+</div>
+
+
+
+
+<br>
+<br>
+<div ng-controller="mycontroller1">
+    <table>
+<thead>
+<th>Name</th>
+<th>Contact number</th>
+</thead>
+        <tbody ng-repeat="contact in nows.data">
+        <td>{{contact.Name}}</td>
+        <td>{{contact.number}}</td>
+        </tbody>
+    </table>
+
+    <input type="text" ng-focus='status="focus"' ng-blur='status="blur"'/>
+{{status}}
+</div>
+
+
+
+<div ng-controller="mycontroller2" >
+<div id="nava">
+    <p ng-repeat="ms in stor" >
+    {{ms}}
+    </p>
+</div>
+<input type="text" ng-model="strin"/>
+    <input type="button" value="submit" ng-click="nextss()"/>
+    </div>
+</div>
+</body>
+</html>
